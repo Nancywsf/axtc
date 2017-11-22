@@ -212,9 +212,14 @@
     miniToastr = require('mini-toastr')
   }
   export default {
+    asyncData (context) {
+      return axios.get('/zxpc/company/get_index_zx_company').then((res) => {
+        zxsj = res.data.data
+      })
+    },
     data () {
       return {
-        zxsj: '',
+        // zxsj: '',
         meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
         userInfo: {isLogin: ''},
         sid: '',
@@ -288,9 +293,9 @@
       }
     },
     created () {
-      axios.get('/zxpc/company/get_index_zx_company').then((res) => {
-        this.zxsj = res.data.data
-      })
+      //      axios.get('/zxpc/company/get_index_zx_company').then((res) => {
+      //        this.zxsj = res.data.data
+      //      })
     },
     methods: {
       changSearchKey (event) {
