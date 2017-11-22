@@ -338,7 +338,7 @@
   export default {
     asyncData (context) {
       function advlist () {
-        return axios.get(HOST + '/zxpc/index/advlist')
+        return axios.get(context.store.state.HOST + '/zxpc/index/advlist')
       }
       function showCoupon () {
         return axios.post(HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
