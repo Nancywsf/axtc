@@ -482,8 +482,9 @@
           return false
         }
         var mobile = sessionStorage.getItem('mobile')
+        console.log(this.$store.state.HOST)
         axios.post(
-          this.$store.state.HOST + '/zxpc/my/duihuan',
+          '/zxpc/my/duihuan',
           {mobile: mobile, pay_points: data.pay_points, coupon_id: data.coupon_id, sid: sessionStorage.getItem('sid')},
           {emulateJSON: true}
         ).then((response) => {
