@@ -214,7 +214,7 @@
   export default {
     asyncData (context) {
       function zxsj () {
-        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
+        return axios.get('/zxpc/company/get_index_zx_company')
       }
       return axios.all([
         zxsj()
