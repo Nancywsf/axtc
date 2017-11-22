@@ -213,8 +213,8 @@
   }
   export default {
     asyncData (context) {
-      return axios.get('http://zx.axfc.cn/zxpc/company/get_index_zx_company').then((res) => {
-        zxsj = res.data.data
+      return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company').then((res) => {
+        return {zxsj: res.data.data}
       })
     },
     data () {
