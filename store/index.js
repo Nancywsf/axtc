@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let HOST = 'http://zx.axfc.cn'
+let HOST = 'http://localhost:3000'
 let sid = ''
 if (process.browser) {
   sid = sessionStorage.getItem('sid')
