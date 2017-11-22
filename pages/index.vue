@@ -173,51 +173,11 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  import vFooter from '~/components/footer/footer'
-  import vHeader from '~/components/header/header'
-  const ERR = 0
   let miniToastr
   if (process.browser) {
     miniToastr = require('mini-toastr')
   }
   export default {
-    components: {
-      vHeader, vFooter
-    },
-    asyncData (context) {
-      function advlist () {
-        return axios.get(context.store.state.HOST + '/zxpc/index/advlist')
-      }
-      function showCoupon () {
-        return axios.post(context.store.state.HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
-      }
-      function zxsj () {
-        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
-      }
-      function jcsj () {
-        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_jc_company')
-      }
-      function jdal () {
-        return axios.get(context.store.state.HOST + '/zxpc/jdcase/get_index_case')
-      }
-      return axios.all([
-        advlist(),
-        showCoupon(),
-        zxsj(),
-        jcsj(),
-        jdal()
-      ])
-        .then((res) => {
-          return {
-            banners: res[0].data,
-            yhqList: res[1].data.data,
-            zxsj: res[2].data.data,
-            jcsj: res[3].data.data,
-            jdal: res[4].data
-          }
-        })
-    },
     data () {
       return {
         meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
@@ -319,32 +279,6 @@
         // this.openDialog()
       },
       buyYHQ (event) {
-        var data = {}
-        let o = event.currentTarget
-        data.pay_points = o.getAttribute('data-point')
-        data.coupon_id = o.getAttribute('data-id')
-        if (this.userInfo.isLogin === 'false') {
-          this.showLoginError({message: '请先登录，再领取优惠券', type: 'error'})
-          return false
-        }
-        var mobile = sessionStorage.getItem('mobile')
-        axios.post(
-          this.$store.state.HOST + '/zxpc/my/duihuan',
-          {mobile: mobile, pay_points: data.pay_points, coupon_id: data.coupon_id, sid: sessionStorage.getItem('sid')},
-          {emulateJSON: true}
-        ).then((response) => {
-          response = response.data
-          if (response.code === ERR) {
-            this.showLoginError({message: response.msg, type: 'error'})
-            return false
-          }
-          this.showLoginError({message: response.msg, type: 'info'})
-          if (response.code === 1) {
-            let shade = document.querySelector('.main-shade')
-            shade.style.display = 'none'
-            shade.className += shade.className.replace('show', '')
-          }
-        })
       },
       zxalImgItem (event) {
         let o = event.currentTarget
