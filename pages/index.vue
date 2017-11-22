@@ -207,19 +207,19 @@
 <script>
   import axios from 'axios'
   const ERR = 0
+  const HOST = 'http://zx.axfc.cn'
   let miniToastr
   if (process.browser) {
     miniToastr = require('mini-toastr')
   }
   export default {
     asyncData (context) {
-      return axios.get('http://zx.axfc.cn/zxpc/company/get_index_zx_company').then((res) => {
+      return axios.get(HOST + '/zxpc/company/get_index_zx_company').then((res) => {
         return {zxsj: res.data.data}
       })
     },
     data () {
       return {
-        // zxsj: '',
         meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
         userInfo: {isLogin: ''},
         sid: '',
