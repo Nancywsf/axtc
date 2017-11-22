@@ -213,7 +213,7 @@
   }
   export default {
     asyncData (context) {
-      return axios.get('/zxpc/company/get_index_zx_company').then((res) => {
+      return axios.get('http://zx.axfc.cn/zxpc/company/get_index_zx_company').then((res) => {
         zxsj = res.data.data
       })
     },
