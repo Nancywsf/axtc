@@ -34,6 +34,38 @@
       </div>
       <!--我们的服务 结束-->
 
+      <!--装修商家 开始-->
+      <div class="part part-zxsj">
+        <div class="part-box">
+          <h1 class="part-title title">装修商家</h1>
+          <p class="part-subtitle subtitle">推荐优秀的装修商家</p>
+          <div class="part-content">
+            <ul class="zxsj-list">
+              <li v-for="item in zxsj">
+                <div class="img-box">
+                  <router-link :to="{path:'/zxCompanyInfo/'+ item.id + '/case'}" target="_blank">
+                    <img :src="item.img1" :alt="item.title">
+                    <div class="tag bg-red">免费设计</div>
+                  </router-link>
+                </div>
+                <div class="bottom-txt">
+                  <router-link :to="{path:'/zxCompanyInfo/'+ item.id + '/case'}" target="_blank">
+                    <h3 class="title" :title="item.title"><i class="fa fa-building"></i>{{item.title}}</h3>
+                    <p class="subtitle">
+                      <em class="fl">案例：<em class="color-red">{{item.case_total}}</em></em>
+                      <em class="fr">好评：<em class="color-red">{{(Number(item.pingfeng) / 5 * 100).toFixed(1) + '%'}}</em></em>
+                    </p>
+                  </router-link>
+                  <a :data-id="item.id" class="linkBtn btn-yysj" target="_blank" data-dlialog="main-yysj" @click="clickYY(item)">预约商家</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <router-link :to="{path:'/zxCompany'}" class="linkBtn-formore">更多&nbsp;&nbsp;&gt;&gt;</router-link>
+        </div>
+      </div>
+      <!--装修商家 结束-->
+
       <!--服务流程 开始-->
       <div class="part part-fwlc">
         <div class="part-box">
@@ -180,6 +212,19 @@
     miniToastr = require('mini-toastr')
   }
   export default {
+    asyncData (context) {
+      function zxsj () {
+        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
+      }
+      return axios.all([
+        zxsj()
+      ])
+        .then((res) => {
+          return {
+            zxsj: res[0].data.data
+          }
+        })
+    },
     data () {
       return {
         meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
