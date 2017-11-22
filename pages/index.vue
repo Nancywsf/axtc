@@ -2,6 +2,35 @@
   <section class="container">
     <!--头部-->
     <div class="main">
+      <!--banner 开始-->
+      <div class="home-banner banner">
+        <div v-swiper:mySwiper="indexSwiperOption" id="indexSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="(item, index) in banners">
+              <img :src="item.img" :alt="item.title">
+            </div>
+          </div>
+          <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-rectangle swiper-pagination-green"></div>
+        </div>
+        <div class="banner-search search-wrap">
+          <ul class="keyword-list">
+            <li :class="{'on': searchTabIndex === 0}" @click="searchTabIndex=0;changSearchKey" data-type="1" data-placeholder="搜索建材商家">装修公司</li>
+            <li :class="{'on': searchTabIndex === 1}" @click="searchTabIndex=1;changSearchKey" data-type="2" data-placeholder="搜索建材商家">建材商家</li>
+          </ul>
+          <div class="search-fill">
+            <i class="fa fa-search"></i>
+            <input id="searchKey"
+                   type="text"
+                   :placeholder="searchTabIndex === 0 ? '搜索装修公司' : '搜索建材商家'"
+                   :data-type="searchTabIndex === 0 ? '1' : '2'"
+                   :value="searchKey"
+                   v-model="searchKey"
+                   @keyup.enter="searchKeyWord">
+            <button class="button bg-green" @click="searchKeyWord">搜索</button>
+          </div>
+        </div>
+      </div>
+      <!--banner 结束-->
 
       <!--我们的服务 开始-->
       <div class="part part-wmdfw">
@@ -33,6 +62,32 @@
         </div>
       </div>
       <!--我们的服务 结束-->
+
+      <!--优惠券 开始-->
+      <div class="part part-yhq">
+        <div class="part-box">
+          <h1 class="part-title title">优惠券</h1>
+          <p class="part-subtitle subtitle">消费抵用券，消费更实惠</p>
+          <div class="part-content">
+            <div v-swiper:yhqSwiper="yhqSwiperOption" id="yhqSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="item in yhqList">
+                  <em class="price">{{item.price}}</em>
+                  <img v-if="item.leixing === 1" src="/img/temp/yhq-3.jpg" :alt="item.pay_points">
+                  <img v-if="item.leixing === 2" src="/img/temp/yhq-2.jpg" :alt="item.pay_points">
+                  <img v-if="item.leixing === 3" src="/img/temp/yhq-1.jpg" :alt="item.pay_points">
+                  <p><em class="fl">兑换积分：{{item.pay_points}}</em><em class="fr btn-getyhq" :data-id="item.id" :data-point="item.pay_points" @click="buyYHQ">立即兑换</em></p>
+                </div>
+              </div>
+              <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+              <div class="swiper-button-next" slot="button-next">&gt;</div>
+            </div>
+            <div class="icon-up"></div>
+            <p class="title login-txt">登录微信积分商城&nbsp;&nbsp;查看更多优惠券</p>
+          </div>
+        </div>
+      </div>
+      <!--优惠券 结束-->
 
       <!--装修商家 开始-->
       <div class="part part-zxsj">
@@ -66,6 +121,39 @@
       </div>
       <!--装修商家 结束-->
 
+      <!--建材商家 开始-->
+      <div class="part part-jcsj">
+        <div class="part-box">
+          <h1 class="part-title title">建材商家</h1>
+          <p class="part-subtitle subtitle">好的建材，是好装修的基础 <router-link :to="{path:'/jcCompany'}" id="allJcsj">全部商家</router-link></p>
+          <div class="part-content" id="jcsjSwiper-wrap">
+            <div v-swiper:jcSwiper="swiperOption_jc" id="jcsjSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="item in jcsj">
+                  <router-link :to="{path: '/jcCompanyinfo/' + item.id + '/product'}" target="_blank">
+                    <div class="top-logo" :style="'background-image: url(' + item.logo + ');'"></div>
+                    <div class="img-box">
+                      <img :src="item.img1" :alt="item.name">
+                    </div>
+                    <div class="bottom-txt">
+                      <h3 class="title">{{item.title}}</h3>
+                      <p class="tags">
+                        <em class="tag" v-for="tag in item.tag" :class="'color-'+tag.color">{{tag.txt}}</em>
+                      </p>
+                    </div>
+                  </router-link>
+                </div>
+              </div>
+              <div class="swiper-pagination swiper-pagination-bullets"></div>
+            </div>
+
+            <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+            <div class="swiper-button-next" slot="button-next">&gt;</div>
+          </div>
+        </div>
+      </div>
+      <!--建材商家 结束-->
+
       <!--服务流程 开始-->
       <div class="part part-fwlc">
         <div class="part-box">
@@ -83,6 +171,41 @@
         </div>
       </div>
       <!--服务流程 结束-->
+
+      <!--经典案例 开始-->
+      <div class="part part-jdal">
+        <h1 class="part-title title">经典案例</h1>
+        <p class="part-subtitle subtitle">经典案例，可供参考</p>
+        <div class="part-content">
+          <div class="left-swiper fl" id="zxalSwiper">
+            <div v-swiper:zxalSwiper="swiperOption[0]" v-for="(item, index) in jdal" :class="{on: index == 0}">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(img, index) in item.img">
+                  <router-link :to="'/zxCaseInfo/' + item.id" target="_blank">
+                    <img :src="item.img[index]" :alt="item.title">
+                  </router-link>
+                </div>
+              </div>
+              <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+              <div class="swiper-button-next" slot="button-next">&gt;</div>
+            </div>
+          </div>
+          <ul class="right-allist fr">
+            <li v-for="(item, index) in jdal" :class="{on: index == 0}" @click="zxalImgItem">
+              <div class="left-img-box fl">
+                <img :src="item.img[0]" :alt="item.title">
+              </div>
+              <div class="right-txt">
+                <h4 class="title">{{item.huxing}}/{{item.style}}/{{item.money}}万元</h4>
+                <p class="subtitle"><i class="fa fa-map-marker"></i>{{item.cell_name}}</p>
+                <p class="subtitle"><i class="fa fa-building"></i>{{item.company_name}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <router-link :to="{path:'/zxCase'}" class="linkBtn-formore">查看更多</router-link>
+      </div>
+      <!--经典案例 结束-->
 
       <!--今日资讯 开始-->
       <div class="part part-jrzx">
@@ -214,9 +337,37 @@
   }
   export default {
     asyncData (context) {
-      return axios.get(HOST + '/zxpc/company/get_index_zx_company').then((res) => {
-        return {zxsj: res.data.data}
-      })
+      function advlist () {
+        return axios.get(HOST + '/zxpc/index/advlist')
+      }
+      function showCoupon () {
+        return axios.post(HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
+      }
+      function zxsj () {
+        return axios.get(HOST + '/zxpc/company/get_index_zx_company')
+      }
+      function jcsj () {
+        return axios.get(HOST + '/zxpc/company/get_index_jc_company')
+      }
+      function jdal () {
+        return axios.get(HOST + '/zxpc/jdcase/get_index_case')
+      }
+      return axios.all([
+        advlist(),
+        showCoupon(),
+        zxsj(),
+        jcsj(),
+        jdal()
+      ])
+        .then((res) => {
+          return {
+            banners: res[0].data,
+            yhqList: res[1].data.data,
+            zxsj: res[2].data.data,
+            jcsj: res[3].data.data,
+            jdal: res[4].data
+          }
+        })
     },
     data () {
       return {
