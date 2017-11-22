@@ -1,9 +1,389 @@
 <template>
   <section class="container">
-    同城一家
+    <!--头部-->
+    <div class="main">
+
+      <!--我们的服务 开始-->
+      <div class="part part-wmdfw">
+        <div class="part-box">
+          <router-link to="mfsj">
+            <section class="item-wmdfw item-wmdfw-mfsj">
+              <h3>免费设计</h3>
+              <p>为您获取三份设计方案</p>
+            </section>
+          </router-link>
+          <router-link to="zxfy">
+            <section class="item-wmdfw item-wmdfw-mflf">
+              <h3>免费报价</h3>
+              <p>为您获取三份设计方案</p>
+            </section>
+          </router-link>
+          <router-link to="zxxd">
+            <section class="item-wmdfw item-wmdfw-zxsj">
+              <h3>装修信贷</h3>
+              <p>为您获取三份设计方案</p>
+            </section>
+          </router-link>
+          <router-link to="zxbz">
+            <section class="item-wmdfw item-wmdfw-zxbz">
+              <h3>装修保障</h3>
+              <p>为您获取三份设计方案</p>
+            </section>
+          </router-link>
+        </div>
+      </div>
+      <!--我们的服务 结束-->
+
+      <!--服务流程 开始-->
+      <div class="part part-fwlc">
+        <div class="part-box">
+          <h1 class="part-title title">{{fwlc.title}}</h1>
+          <p class="part-subtitle subtitle">{{fwlc.subtitle}}</p>
+          <div class="part-content">
+            <ul class="fwlc-list">
+              <li v-for="item in fwlc.steps">
+                <div class="img-box" :style="'background-image: url(' + item.img + ');'"></div>
+                <h4 class="title">{{item.title}}</h4>
+                <p class="subtitle">{{item.subtitle}}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--服务流程 结束-->
+
+      <!--今日资讯 开始-->
+      <div class="part part-jrzx">
+        <h1 class="part-title title">今日资讯</h1>
+        <p class="part-subtitle subtitle">实时，时效，专注</p>
+        <div class="part-content part-box">
+          <ul class="tab-list">
+            <li :class="{'on': newstab === 0}" data-tab="_gsdt" @click="newstab = 0">公司动态</li>
+            <li :class="{'on': newstab === 1}" data-tab="_mtbd" @click="newstab = 1">媒体报道</li>
+            <li :class="{'on': newstab === 2}" data-tab="_hyzx" @click="newstab = 2">行业资讯</li>
+          </ul>
+          <div class="tab-content">
+            <div class="_gsdt" v-show="newstab === 0">
+              <ul class="news-list news-txt fl">
+                <li class="header-news"><a href="">重磅！江苏1123李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li class="hot-news"><a href="">重磅！江苏李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+              </ul>
+              <ul class="news-list news-img fl">
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+              </ul>
+            </div>
+            <div class="_mtbd" v-show="newstab === 1" style="display: none;">
+              <ul class="news-list news-txt fl">
+                <li class="header-news"><a href="">重磅！江苏1123李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;媒体报道</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li class="hot-news"><a href="">重磅！江苏李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+              </ul>
+              <ul class="news-list news-img fl">
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+              </ul>
+            </div>
+            <div class="_hyzx" v-show="newstab === 2" style="display: none;">
+              <ul class="news-list news-txt fl">
+                <li class="header-news"><a href="">重磅！江苏1123李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;行业资讯</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li class="hot-news"><a href="">重磅！江苏李振ad防守打法</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+                <li><a href="">·&nbsp;啊咧啊咧啊咧啊咧啊咧啊咧啊咧</a></li>
+              </ul>
+              <ul class="news-list news-img fl">
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+                <li><a href=""><img src="/img/banner.jpg" alt="风生水起！"><div class="bottom">风生水起！风生水起！风生水起！风生水起！</div></a></li>
+              </ul>
+            </div>
+          </div>
+          <router-link to="/news" class="fr for-more color-green">更多&nbsp;&gt;</router-link>
+        </div>
+      </div>
+      <!--今日资讯 结束-->
+
+      <!--我们的优势 开始-->
+      <div class="part part-advans">
+        <div class="part-box">
+          <ul>
+            <li>
+              <div class="img-box"><i class="icon"></i>自由比价</div>
+              <h5 class="title">三家公司 自由比价</h5>
+              <p class="subtitle">对比三家公司出报价和方案</p>
+            </li>
+            <li>
+              <div class="img-box"><i class="icon"></i>品质服务</div>
+              <h5 class="title">优质服务 品质保障</h5>
+              <p class="subtitle">严格监督装修每一步，保障装修质量</p>
+            </li>
+            <li>
+              <div class="img-box"><i class="icon"></i>诚信商家</div>
+              <h5 class="title">诚信商家 安全保障</h5>
+              <p class="subtitle">商家诚信，为业主良心考虑，真正做好装修</p>
+            </li>
+            <li>
+              <div class="img-box"><i class="icon"></i>重金保障</div>
+              <h5 class="title">高额保障 诚信服务</h5>
+              <p class="subtitle">商家高额保障金，严格把关每一步装修流程</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--我们的优势 结束-->
+
+    </div>
+    <!--底部-->
   </section>
 </template>
 
+<script>
+  import axios from 'axios'
+  import vFooter from '~/components/footer/footer'
+  import vHeader from '~/components/header/header'
+  const ERR = 0
+  let miniToastr
+  if (process.browser) {
+    miniToastr = require('mini-toastr')
+  }
+  export default {
+    components: {
+      vHeader, vFooter
+    },
+    asyncData (context) {
+      function advlist () {
+        return axios.get(context.store.state.HOST + '/zxpc/index/advlist')
+      }
+      function showCoupon () {
+        return axios.post(context.store.state.HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
+      }
+      function zxsj () {
+        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
+      }
+      function jcsj () {
+        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_jc_company')
+      }
+      function jdal () {
+        return axios.get(context.store.state.HOST + '/zxpc/jdcase/get_index_case')
+      }
+      return axios.all([
+        advlist(),
+        showCoupon(),
+        zxsj(),
+        jcsj(),
+        jdal()
+      ])
+        .then((res) => {
+          return {
+            banners: res[0].data,
+            yhqList: res[1].data.data,
+            zxsj: res[2].data.data,
+            jcsj: res[3].data.data,
+            jdal: res[4].data
+          }
+        })
+    },
+    data () {
+      return {
+        meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
+        userInfo: {isLogin: ''},
+        sid: '',
+        indexSwiperOption: {
+          notNextTick: true,
+          loop: true,
+          setWrapperSize: true,
+          pagination: '#indexSwiper .swiper-pagination',
+          paginationClickable: true,
+          autoplay: 3000
+        },
+        searchTabIndex: 0,
+        searchKey: '',
+        yhqSwiperOption: {
+          notNextTick: true,
+          slidesPerView: 4,
+          spaceBetween: 30,
+          prevButton: '#yhqSwiper .swiper-button-prev',
+          nextButton: '#yhqSwiper .swiper-button-next'
+        },
+        swiperOption_jc: {
+          notNextTick: true,
+          slidesPerView: 3,
+          spaceBetween: 30,
+          prevButton: '#jcsjSwiper-wrap .swiper-button-prev',
+          nextButton: '#jcsjSwiper-wrap .swiper-button-next'
+        },
+        fwlc: {
+          title: '服务流程',
+          subtitle: '认真服务每一步，给您温暖的家',
+          steps: [{
+            img: '/img/icon-time.png',
+            title: '预约商家',
+            subtitle: '提交姓名和电话'
+          }, {
+            img: '/img/icon-files.png',
+            title: '对比方案',
+            subtitle: '对比多家公司方案'
+          }, {
+            img: '/img/icon-dialogs.png',
+            title: '线下沟通',
+            subtitle: '线下与商家沟通'
+          }, {
+            img: '/img/icon-con.png',
+            title: '签订合同',
+            subtitle: '签订合同条款协议'
+          }, {
+            img: '/img/icon-zx.png',
+            title: '开始装修',
+            subtitle: '装修开始阶段'
+          }, {
+            img: '/img/icon-speed.png',
+            title: '支付费用',
+            subtitle: '支付装修所需费用'
+          }, {
+            img: '/img/icon-wc.png',
+            title: '验收完成',
+            subtitle: '所有项目完成验收'
+          }]
+        },
+        swiperOption: [
+          {
+            notNextTick: true,
+            loop: true,
+            setWrapperSize: true,
+            prevButton: '#zxalSwiper .swiper-button-prev',
+            nextButton: '#zxalSwiper .swiper-button-next'
+          }
+        ],
+        newstab: 0
+      }
+    },
+    created () {
+    },
+    methods: {
+      changSearchKey (event) {
+        //        event.
+        //        $this.addClass('on').siblings().removeClass('on')
+        //        $this.parents('.search-wrap').find('input').attr('placeholder', $this.data('placeholder'))
+        //        $('#searchKey').data('type', $this.data('type'))
+      },
+      searchKeyWord () {},
+      clickYY (item) {
+        if (this.userInfo.isLogin === 'true') { // 已登录
+          let data = {
+            company_id: item.id,
+            cpmpanyName: item.title,
+            username: sessionStorage.getItem('nickname'),
+            mobile: sessionStorage.getItem('mobile'),
+            sid: sessionStorage.getItem('sid')
+          }
+          let res = this.$store.dispatch('yyShop', data)
+          if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
+          return false
+        }
+        // 未登录
+        // this.openDialog()
+      },
+      buyYHQ (event) {
+        var data = {}
+        let o = event.currentTarget
+        data.pay_points = o.getAttribute('data-point')
+        data.coupon_id = o.getAttribute('data-id')
+        if (this.userInfo.isLogin === 'false') {
+          this.showLoginError({message: '请先登录，再领取优惠券', type: 'error'})
+          return false
+        }
+        var mobile = sessionStorage.getItem('mobile')
+        axios.post(
+          this.$store.state.HOST + '/zxpc/my/duihuan',
+          {mobile: mobile, pay_points: data.pay_points, coupon_id: data.coupon_id, sid: sessionStorage.getItem('sid')},
+          {emulateJSON: true}
+        ).then((response) => {
+          response = response.data
+          if (response.code === ERR) {
+            this.showLoginError({message: response.msg, type: 'error'})
+            return false
+          }
+          this.showLoginError({message: response.msg, type: 'info'})
+          if (response.code === 1) {
+            let shade = document.querySelector('.main-shade')
+            shade.style.display = 'none'
+            shade.className += shade.className.replace('show', '')
+          }
+        })
+      },
+      zxalImgItem (event) {
+        let o = event.currentTarget
+        let siblings = o.parentNode.childNodes
+        let index = 0
+        for (let i = 0; i < siblings.length; i++) {
+          if (o === siblings[i]) {
+            siblings[i].className = 'on'
+            index = i
+          } else {
+            siblings[i].className = ''
+          }
+        }
+        let swiperSiblings = document.querySelector('#zxalSwiper').childNodes
+        let swiper = document.querySelector('#zxalSwiper').childNodes[index]
+        for (let i = 0; i < swiperSiblings.length; i++) {
+          if (swiper === swiperSiblings[i]) {
+            swiperSiblings[i].className += ' on'
+            index = i
+          } else {
+            swiperSiblings[i].className = swiperSiblings[i].className.replace(' on', '')
+          }
+        }
+        if (swiper.getAttribute('data-init') === true) { return false }
+      }
+    },
+    mounted () {
+      miniToastr.init()
+      this.userInfo.isLogin = sessionStorage.getItem('isLogin')
+    },
+    notifications: {
+      showLoginError: {
+        title: '',
+        message: 'Hello from nuxt.js',
+        type: 'warn'
+      }
+    }
+  }
+</script>
 
 <style scoped>
   :after, :not(.fa):before {
