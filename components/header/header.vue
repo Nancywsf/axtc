@@ -5,11 +5,11 @@
       <div class="logo fl"><a href="#"><img src="~/static/img/logo.png" alt="" width="87" height="41"></a></div>
       <div class="header-nav header-nav-left fl" id="topNav" v-if="meta.userPage !== true">
         <ul class="header-nav-list" id="topNavList">
-          <li :class="{on : meta.tabIndex == 0}"><router-link to="/">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</router-link></li>
+          <li :class="{on : meta.tabIndex == 0}"><nuxt-link to="/">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</nuxt-link></li>
           <li :class="{on : meta.tabIndex == 1}"><nuxt-link to="/zxCompany">装修公司</nuxt-link></li>
-          <li :class="{on : meta.tabIndex == 2}"><router-link to="/jcCompany">建材商家</router-link></li>
-          <li :class="{on : meta.tabIndex == 3}"><router-link to="/zxCase">装修案例</router-link></li>
-          <li :class="{on : meta.tabIndex == 4}"><router-link to="/zxxd">装修信贷</router-link></li>
+          <li :class="{on : meta.tabIndex == 2}"><nuxt-link to="/jcCompany">建材商家</nuxt-link></li>
+          <li :class="{on : meta.tabIndex == 3}"><nuxt-link to="/zxCase">装修案例</nuxt-link></li>
+          <li :class="{on : meta.tabIndex == 4}"><nuxt-link to="/zxxd">装修信贷</nuxt-link></li>
           <li>
             <div class="has-drop-txt">积分商城
               <div class="has-drop">
