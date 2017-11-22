@@ -118,7 +118,7 @@
     },
     asyncData (context) {
       function getHotWord () {
-        return axios.get(context.store.state.HOST + '/zxpc/company/getHotKeyword?type=1')
+        return axios.get('http://zx.axfc.cn/zxpc/company/getHotKeyword?type=1')
       }
       function getCompanyList () {
         let data = {
@@ -127,7 +127,7 @@
           keyword: '',
           order: ''
         }
-        return axios.post(context.store.state.HOST + '/zxpc/company/getZxCompanyList', data)
+        return axios.post('http://zx.axfc.cn/zxpc/company/getZxCompanyList', data)
       }
       return axios.all([
         getHotWord(),
