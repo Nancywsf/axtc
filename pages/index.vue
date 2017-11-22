@@ -1,6 +1,7 @@
 <template>
   <section class="container">
     <!--头部-->
+    <v-header :meta="meta" :userInfo="userInfo"></v-header>
     <div class="main">
       <!--banner 开始-->
       <div class="home-banner banner">
@@ -324,33 +325,38 @@
 
     </div>
     <!--底部-->
+    <v-footer :meta="meta"></v-footer>
   </section>
 </template>
 
 <script>
   import axios from 'axios'
+  import vHeader from '~/components/header/header'
+  import vFooter from '~/components/footer/footer'
   const ERR = 0
-  const HOST = 'http://zx.axfc.cn'
   let miniToastr
   if (process.browser) {
     miniToastr = require('mini-toastr')
   }
   export default {
+    components: {
+      vHeader, vFooter
+    },
     asyncData (context) {
       function advlist () {
         return axios.get(context.store.state.HOST + '/zxpc/index/advlist')
       }
       function showCoupon () {
-        return axios.post(HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
+        return axios.post(context.store.state.HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
       }
       function zxsj () {
-        return axios.get(HOST + '/zxpc/company/get_index_zx_company')
+        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
       }
       function jcsj () {
-        return axios.get(HOST + '/zxpc/company/get_index_jc_company')
+        return axios.get(context.store.state.HOST + '/zxpc/company/get_index_jc_company')
       }
       function jdal () {
-        return axios.get(HOST + '/zxpc/jdcase/get_index_case')
+        return axios.get(context.store.state.HOST + '/zxpc/jdcase/get_index_case')
       }
       return axios.all([
         advlist(),
@@ -482,9 +488,8 @@
           return false
         }
         var mobile = sessionStorage.getItem('mobile')
-        console.log(this.$store.state.HOST)
         axios.post(
-          '/zxpc/my/duihuan',
+          this.$store.state.HOST + '/zxpc/my/duihuan',
           {mobile: mobile, pay_points: data.pay_points, coupon_id: data.coupon_id, sid: sessionStorage.getItem('sid')},
           {emulateJSON: true}
         ).then((response) => {
