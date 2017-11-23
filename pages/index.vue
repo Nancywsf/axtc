@@ -360,18 +360,18 @@
       }
       return axios.all([
         advlist(),
-        showCoupon(),
         zxsj(),
         jcsj(),
-        jdal()
+        jdal(),
+        showCoupon()
       ])
         .then((res) => {
           return {
             banners: res[0].data,
-            yhqList: res[1].data.data,
-            zxsj: res[2].data.data,
-            jcsj: res[3].data.data,
-            jdal: res[4].data
+            zxsj: res[1].data.data,
+            jcsj: res[2].data.data,
+            jdal: res[3].data,
+            yhqList: res[4].data.data
           }
         })
     },
