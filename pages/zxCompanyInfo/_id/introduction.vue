@@ -9,7 +9,7 @@
   import axios from 'axios'
   export default {
     asyncData (context) {
-      return axios.post(context.store.state.HOST + '/zxpc/company/getZxCompanyById', {id: context.route.params.id}).then((res) => {
+      return axios.get(context.store.state.HOST + '/zxpc/company/getZxCompanyById?id=' + context.route.params.id).then((res) => {
         return {com: res.data.data}
       })
     }

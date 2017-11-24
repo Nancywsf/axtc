@@ -7,8 +7,10 @@
       </li>
       <li><input placeholder="What needs to be done?" @keyup.enter="addTodo"></li>
     </ul>
-    <nuxt-link to="/">首页</nuxt-link>
-    <nuxt-link to="/zxCompany">装修列表</nuxt-link>
+    <a href="/">a</a><br>
+    <router-link :to="`/`">router-link</router-link><br>
+    <nuxt-link to="/">nuxt-link</nuxt-link><br>
+    <a href="/zxCompany">装修列表</a><br>
   </div>
 </template>
 

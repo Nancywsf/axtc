@@ -44,7 +44,7 @@
         pagesize: 5,
         pageNo: 1
       }
-      return axios.post(context.store.state.HOST + '/zxpc/jdcase/getEvaluateByCompanyID', data).then((res) => {
+      return axios.get(context.store.state.HOST + '/zxpc/jdcase/getEvaluateByCompanyID?cid=' + context.route.params.id + '&page=0&pagesize=5').then((res) => {
         return {
           comment: res.data.data,
           pageData: {page: 1, pagesize: data.pagesize, pageNo: res.data.pageCount}
@@ -63,9 +63,8 @@
     },
     methods: {
       getCommentList: function (data) {
-        axios.post(
-          this.$store.state.HOST + '/zxpc/jdcase/getEvaluateByCompanyID',
-          {page: data.page - 1, pagesize: data.pagesize, cid: this.id},
+        axios.get(
+          this.$store.state.HOST + '/zxpc/jdcase/getEvaluateByCompanyID?cid=' + this.id + '&page=' + (data.page - 1).toString() + '&pagesize=' + data.pagesize.toString(),
           {emulateJSON: true}
         ).then((response) => {
           response = response.data

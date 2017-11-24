@@ -347,7 +347,7 @@
         return axios.get(context.store.state.HOST + '/zxpc/index/advlist')
       }
       function showCoupon () {
-        return axios.post(context.store.state.HOST + '/zxpc/Coupon/showCoupon', {weizhi: 0})
+        return axios.get(context.store.state.HOST + '/zxpc/Coupon/showCoupon?weizhi=0')
       }
       function zxsj () {
         return axios.get(context.store.state.HOST + '/zxpc/company/get_index_zx_company')
@@ -450,9 +450,6 @@
       }
     },
     created () {
-      //      axios.get('/zxpc/company/get_index_zx_company').then((res) => {
-      //        this.zxsj = res.data.data
-      //      })
     },
     methods: {
       changSearchKey (event) {

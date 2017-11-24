@@ -110,7 +110,6 @@
   import axios from 'axios'
 
   const ERR = 0
-  const APIHOST = 'http://zx.axfc.cn'
 
   export default {
     components: {
@@ -121,13 +120,13 @@
         return axios.get(context.store.state.HOST + '/zxpc/company/getHotKeyword?type=1')
       }
       function getCompanyList () {
-        let data = {
-          page: 0,
-          pagesize: 5,
-          keyword: '',
-          order: ''
-        }
-        return axios.post(context.store.state.HOST + '/zxpc/company/getZxCompanyList', data)
+        //        let data = {
+        //          page: 0,
+        //          pagesize: 5,
+        //          keyword: '',
+        //          order: ''
+        //        }
+        return axios.get(context.store.state.HOST + '/zxpc/company/getZxCompanyList?page=0&pagesize=5')
       }
       return axios.all([
         getHotWord(),
@@ -136,7 +135,8 @@
         .then((res) => {
           return {
             hotKey: res[0].data.data,
-            zxCompanyList: res[1].data.data
+            zxCompanyList: res[1].data.data,
+            pageData: { page: 1, pagesize: 5, pageNo: res[1].data.pageCount, order: '', keyword: '' }
           }
         })
     },
@@ -147,7 +147,7 @@
         pageData: {
           page: 1,
           pagesize: 5,
-          pageNo: 0,
+          pageNo: 1,
           order: '',
           keyword: this.$route.query.keyword === undefined ? '' : this.$route.query.keyword
         },
@@ -165,13 +165,13 @@
     methods: {
       // 获取公司列表
       getCompanyList: function (data) {
-        this.getLoading()
-        this.$http.post(
-          APIHOST + '/zxpc/company/getZxCompanyList',
-          {page: data.page - 1, pagesize: data.pagesize, keyword: data.keyword, order: data.order},
+        // this.getLoading()
+        console.log()
+        axios.get(
+          this.$store.state.HOST + '/zxpc/company/getZxCompanyList?page=' + (data.page - 1).toString() + '&pagesize=' + data.pagesize.toString() + '&keyword=' + data.keyword + '&order=' + data.order,
           {emulateJSON: true}
         ).then((response) => {
-          response = response.body
+          response = response.data
           this.$layer.closeAll('loading')
           if (response.code === ERR) {
             this.$layer.msg(response.msg)
@@ -182,13 +182,36 @@
         })
       },
       clickKeyWord: function (event) {
-        this.pageData.keyword = event.currentTarget
+        this.pageData.keyword = event.currentTarget.innerText
         this.getCompanyList(this.pageData)
       },
       searchListByKey: function () {
         this.getCompanyList(this.pageData)
       },
       listOrder: function (event) {
+        let that = this
+        that.pageData.order = ''
+        var o = event.currentTarget
+        if (o.getAttribute('data-order') !== '') {
+          that.pageData.order = o.getAttribute('data-order') + o.getAttribute('data-type')
+          if (o.getAttribute('data-type') === 'desc') {
+            o.setAttribute('data-type', 'asc')
+            o.className += ' desc'
+            o.className = o.className.replace('asc', '')
+          } else {
+            o.setAttribute('data-type', 'desc')
+            o.className += ' asc'
+          }
+        }
+        this.getCompanyList(this.pageData)
+        o.className += ' on'
+        let sibings = o.parentNode.childNodes
+        for (let i = 1; i < sibings.length; i++) {
+          if (o === sibings[i]) { continue }
+          sibings[i].className = 'click-order'
+          sibings[i].setAttribute('data-type', 'desc')
+        }
+        o.className += ' on'
       }
     }
   }
