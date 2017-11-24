@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>{{ post.title }}</h1>
-    <pre>{{ post.body }}</pre>
+    <!--<h1>{{ post.title }}</h1>-->
+    <pre>{{ post.content }}</pre>
     <p><nuxt-link to="/posts">Back to the list</nuxt-link></p>
   </div>
 </template>
@@ -9,10 +9,11 @@
 <script>
   import axios from 'axios'
   export default {
-    async asyncData ({ params }) {
+    asyncData ({ params }) {
       // We can use async/await ES6 feature
-      let { data } = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-      return { post: data }
+      return axios.get(`http://zx.axfc.cn/zxpc/company/getJcCompanyInfo?id=4`).then((res) => {
+        return { post: res.data.data }
+      })
     },
     head () {
       return {
