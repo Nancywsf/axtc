@@ -26,15 +26,11 @@
     methods: {
       prePage (event) {
         // 上一页
-        //        var $this = $(event.currentTarget)
-        //        var index = Number($this.parent().find('.page-index.active').text()) - 1
-        //        this.goPage(index)
+        this.goPage(this.pageData.page - 1)
       },
       nextPage (event) {
         // 下一页
-        //        var $this = $(event.currentTarget)
-        //        var index = Number($this.parent().find('.page-index.active').text()) + 1
-        //        this.goPage(index)
+        this.goPage(this.pageData.page + 1)
       },
       goPage (index) {
         // 跳转到相应页面
