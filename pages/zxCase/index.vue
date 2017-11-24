@@ -99,13 +99,7 @@
     },
     methods: {
       getCaseList () {
-        axios.post(this.$store.state.HOST + '/zxpc/jdcase/getAllCase',
-          {
-            page: this.pageData.page - 1,
-            pagesize: this.pageData.pagesize,
-            huxing: this.pageData.huxing,
-            style: this.pageData.style
-          },
+        axios.get(this.$store.state.HOST + '/zxpc/jdcase/getAllCase?page=' + (this.pageData.page - 1).toString() + '&pagesize=' + this.pageData.pagesize + '&huxing=' + this.pageData.huxing + '&style=' + this.pageData.style,
           {emulateJSON: true}).then((response) => {
           response = response.data
           //          this.$layer.closeAll('loading')

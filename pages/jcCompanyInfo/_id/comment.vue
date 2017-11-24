@@ -37,7 +37,7 @@
         pagesize: 5,
         pageNo: 1
       }
-      return axios.post(context.store.state.HOST + '/zxpc/company/getJcEvaluateByCompanyID', data).then((res) => {
+      return axios.get(context.store.state.HOST + '/zxpc/company/getJcEvaluateByCompanyID?id=' + context.route.params.id + '&page=0&pagesize=5').then((res) => {
         return {
           comment: res.data.data,
           pageData: {page: 1, pagesize: data.pagesize, pageNo: res.data.pageCount}

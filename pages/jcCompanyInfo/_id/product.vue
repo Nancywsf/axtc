@@ -52,7 +52,7 @@
           category: '',
           order: ''
         }
-        return axios.post(context.store.state.HOST + '/zxpc/company/getJcProductInfo', data)
+        return axios.get(context.store.state.HOST + '/zxpc/company/getJcProductInfo?id=' + data.id + '&page=0&pagesize=18')
       }
       return axios.all([
         getProductFL(),
@@ -79,14 +79,8 @@
     methods: {
       getProductList: function (data) {
         //        this.getLoading()
-        axios.post(this.$store.state.HOST + '/zxpc/company/getJcProductInfo', {
-          id: this.id,
-          page: data.page - 1,
-          pagesize: data.pagesize,
-          category: data.category,
-          order: data.order
-        },
-        {emulateJSON: true}).then((response) => {
+        axios.get(this.$store.state.HOST + '/zxpc/company/getJcProductInfo?id=' + this.id + '&page=' + (data.page - 1).toString() + '&pagesize=' + data.pagesize + '&category=' + data.category + '&order=' + data.order,
+          {emulateJSON: true}).then((response) => {
           response = response.data
           this.$layer.closeAll('loading')
           if (response.code === ERR) {

@@ -39,7 +39,7 @@
       vHeader, vFooter, vAdposition
     },
     asyncData (context) {
-      return axios.post(context.store.state.HOST + '/zxpc/jdcase/getCaseByID', {id: context.route.params.id})
+      return axios.get(context.store.state.HOST + '/zxpc/jdcase/getCaseByID?id=' + context.route.params.id)
         .then((res) => {
           return { caseList: res.data.data }
         })

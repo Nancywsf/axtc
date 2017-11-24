@@ -28,12 +28,7 @@
       vPagination
     },
     asyncData (context) {
-      let data = {
-        id: context.route.params.id,
-        page: 0,
-        pagesize: 12
-      }
-      return axios.post(context.store.state.HOST + '/zxpc/company/getJcProjectInfo', data)
+      return axios.get(context.store.state.HOST + '/zxpc/company/getJcProjectInfo?id=' + context.route.params.id + '&page=0&pagesize=12')
         .then((res) => {
           return {caseList: res.data.data, casePagination: {page: 1, pagesize: 12, pageNo: res.data.pageCount}}
         })
@@ -46,6 +41,9 @@
           pageNo: ''
         }
       }
+    },
+    methods: {
+      getJCProjectList () {}
     }
   }
 </script>

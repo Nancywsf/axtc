@@ -113,13 +113,7 @@
         return axios.get(context.store.state.HOST + '/zxpc/company/getHotKeyword?type=2')
       }
       function getComList () {
-        let data = {
-          page: 0,
-          page_size: 5,
-          keyword: '',
-          order: ''
-        }
-        return axios.post(context.store.state.HOST + '/zxpc/company/getJcCompany', data)
+        return axios.get(context.store.state.HOST + '/zxpc/company/getJcCompany?page=0&page_size=5')
       }
       return axios.all([
         getHotWord(),
@@ -159,8 +153,8 @@
       // 获取公司列表
       getCompanyList: function (data) {
         axios.post(
-          this.$store.state.HOST + '/zxpc/company/getZxCompanyList',
-          {page: data.page - 1, pagesize: data.pagesize, keyword: data.keyword, order: data.order},
+          this.$store.state.HOST + '/zxpc/company/getZxCompanyList?page=' + (data.page - 1).toString() + '&page_size=' + data.pagesize.toString() + '&keyword=' + data.keyword + '&order=' + data.order,
+          // {page: data.page - 1, pagesize: data.pagesize, keyword: data.keyword, order: data.order},
           {emulateJSON: true}
         ).then((response) => {
           response = response.data
