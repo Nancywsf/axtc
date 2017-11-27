@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -37,13 +39,14 @@ module.exports = {
     /*
      ** 不管页面中使用axios等插件多少次，只打包一次
      */
-    vendor: ['axios', 'vue-awesome-swiper', 'vue-layer', 'vue-notifications', 'mini-toastr']
+    vendor: ['axios', 'vue-awesome-swiper', 'vue-layer', 'vue-notifications', 'mini-toastr', 'vue-waterfall']
   },
   plugins: [
     // {'src': '~/plugins/Global.js', ssr: true}
     {'src': '~/plugins/vue-awesome-swiper.js', ssr: false},
     {'src': '~/plugins/vue-layer.js', ssr: false},
-    {'src': '~/plugins/vue-notifications.js', ssr: false}
+    {'src': '~/plugins/vue-notifications.js', ssr: false},
+    {'src': '~/plugins/vue-waterfall.js', ssr: false}
   ],
   css: [
     '~/static/css/font-awesome.min.css',
@@ -56,5 +59,28 @@ module.exports = {
   ],
   proxy: [
     ['/zxpc', { target: 'http://zx.axfc.cn' }]
-  ]
+  ],
+  generate: {
+    routes: function () {
+      function getZxCompany () {
+        return axios.get('http://zx.axfc.cn/zxpc/company/getZxCompanyList?page=0&pagesize=5')
+      }
+      function getJcCompany () {
+        return axios.get('http://zx.axfc.cn/zxpc/company/getJcCompany?page=0&page_size=5')
+      }
+      return axios.all([
+        getZxCompany(),
+        getJcCompany()
+      ])
+        .then((res) => {
+          let array0 = res[0].data.data.map((com) => {
+            return '/zxCompanyInfo/' + com.id + '/case'
+          })
+          let array1 = res[1].data.data.map((com) => {
+            return '/jcCompanyInfo/' + com.id + '/product'
+          })
+          return array0.concat(array1)
+        })
+    }
+  }
 }

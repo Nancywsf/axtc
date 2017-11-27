@@ -15,13 +15,13 @@ export const state = () => ({
 //     state.counter++
 //   }
 // }
-require('whatwg-fetch')
+// require('whatwg-fetch')
 
 export const actions = {
   nuxtServerInit (store, {commit, req}) {
-    if (req.session && req.session.authUser) {
-      commit('SET_USER', req.session.authUser)
-    }
+    // if (req.session && req.session.authUser) {
+    //   commit('SET_USER', req.session.authUser)
+    // }
     store.dispatch('getFooterNav')
     store.dispatch('getFriendLink')
     store.dispatch('getFooterCompanyInfo')
