@@ -1,6 +1,6 @@
 <template>
   <div class="main-shade main-yysj">
-    <div class="shade" @click="hideShade"></div>
+    <div class="shade" @click="closeDialog"></div>
     <section class="shade-dialog yysj-box yysj-box-isLogin" v-if="isLogin == 'true'">
       <img class="yuyue-img" src="/static/img/yuyue.png" alt="预约该商家？">
       <p class="subtitle">是否确定预约</p>
@@ -27,30 +27,25 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import $ from 'jquery';
   export default {
     props: {userYYSJ: {}},
-    data() {
+    data () {
       return {
-        isLogin: sessionStorage.getItem('isLogin'),
+        isLogin: '',
         phoneIsOk: ''
-      };
+      }
     },
-    created() {
-//      console.log(this.isLogin);
+    created () {
     },
     methods: {
       closeDialog: function () {
-        $('.main-yysj').fadeOut().removeClass('show');
+        document.querySelector('.main-yysj').style.display = 'none'
       },
       submit: function () {
-        this.$emit('submit', this.userYYSJ);
-      },
-      hideShade: function () {
-        $('.main-shade').fadeOut().removeClass('show');
+        this.$emit('submit', this.userYYSJ)
       }
     }
-  };
+  }
 </script>
 
 <style scoped>
