@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9610e4fe-fc12-469a-a3fb-13e214eaa1c9" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/jcCompany/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="117" column="96" lean-forward="false" selection-start-line="117" selection-start-column="87" selection-end-line="117" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8254">
+              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/zxCase/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1380">
+              <caret line="60" column="52" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yuyue.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/popWin/yuyue.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-544">
+              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="event-bus.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/event-bus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#37#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Json" />
+        <option value="Vue file" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>page-hd</find>
+      <find>getZxCompanyList</find>
+      <find>pageData</find>
+      <find>casePagination</find>
+      <find>getEvaluateByCompanyID</find>
+      <find>getJCProjectList</find>
+      <find>login</find>
+      <find>getUserData</find>
+      <find>getMyCoupon</find>
+      <find>zxpc/my/myorder</find>
+      <find>loginFun</find>
+      <find>userYYSJ</find>
+      <find>closeDialog</find>
+      <find>openDialog</find>
+      <find>hideShade</find>
+      <find>yuyueShopFun</find>
+      <find>#zxalSwiper .swiper-button-prev</find>
+      <find>push</find>
+      <find>searchListByKey</find>
+      <find>searchKeyWord</find>
+      <find>clickKeyWord</find>
+      <find>userInfo</find>
+      <find>getCompanyList</find>
+      <find>yyShop</find>
+      <find>currentTarget</find>
+      <find>showLoginError</find>
+      <find>validator</find>
+      <find>generate</find>
+      <find>clickYY</find>
+      <find>vue-waterfall</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/pages/user</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pages/zxCompanyInfo/_id/member.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCase/_cid.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCaseInfo/index.vue" />
+        <option value="$PROJECT_DIR$/components/ADPosition/adposition.vue" />
+        <option value="$PROJECT_DIR$/pages/zxxd/index.vue" />
+        <option value="$PROJECT_DIR$/components/popWin/forgetPWD.vue" />
+        <option value="$PROJECT_DIR$/components/popWin/popWin.vue" />
+        <option value="$PROJECT_DIR$/plugins/vue-layer.js" />
+        <option value="$PROJECT_DIR$/plugins/vue-notifications.js" />
+        <option value="$PROJECT_DIR$/pages/user/zxOrder.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhqzx.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhqzx/index.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhqzx/_type.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhqzx/_type/yhqList.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhq/_type.vue" />
+        <option value="$PROJECT_DIR$/components/popWin/changePWD.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/set.vue" />
+        <option value="$PROJECT_DIR$/store/login.js" />
+        <option value="$PROJECT_DIR$/pages/user/index.vue" />
+        <option value="$PROJECT_DIR$/plugins/axios.js" />
+        <option value="$PROJECT_DIR$/pages/todos.vue" />
+        <option value="$PROJECT_DIR$/components/header/header.vue" />
+        <option value="$PROJECT_DIR$/pages/post.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCompanyInfo/_id/comment.vue" />
+        <option value="$PROJECT_DIR$/components/pagination/pagination.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCompanyInfo/_id/introduction.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompanyInfo/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompanyInfo/_id/comment.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompanyInfo/_id/introduction.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompanyInfo/_id/project.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompanyInfo/_id/product.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCase/index.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCaseInfo/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/posts/index.vue" />
+        <option value="$PROJECT_DIR$/pages/posts/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCompanyInfo/_id/case.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/yhq/_type/index.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/zxOrder.vue" />
+        <option value="$PROJECT_DIR$/pages/user/index/jcOrder.vue" />
+        <option value="$PROJECT_DIR$/pages/login/index.vue" />
+        <option value="$PROJECT_DIR$/pages/jcCompany/index.vue" />
+        <option value="$PROJECT_DIR$/components/popWin/yuyue.vue" />
+        <option value="$PROJECT_DIR$/store/yyShop.js" />
+        <option value="$PROJECT_DIR$/utils/event-bus.js" />
+        <option value="$PROJECT_DIR$/pages/zxCompanyInfo/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/zxCompany/index.vue" />
+        <option value="$PROJECT_DIR$/pages/index.vue" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/plugins/vue-waterfall.js" />
+        <option value="$PROJECT_DIR$/store/index.js" />
+        <option value="$PROJECT_DIR$/nuxt.config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="401" />
+    <option name="y" value="23" />
+    <option name="width" value="1220" />
+    <option name="height" value="951" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="axtc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="axtc3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///Users/nancy/Documents/work/axtc3/pages/index.vue&#10;footer&#9;FILE&#9;file:///Users/nancy/Documents/work/axtc3/components/footer/footer.vue&#10;head&#9;FILE&#9;file:///Users/nancy/Documents/work/axtc3/components/header/header.vue&#10;log&#9;ACTION&#9;ShowLog&#10;header&#9;FILE&#9;file:///Users/nancy/Documents/work/axtc3/components/header/header.vue" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/user/index/yhqzx" />
+      <recent name="$PROJECT_DIR$/pages/user/index" />
+      <recent name="$PROJECT_DIR$/pages/user" />
+      <recent name="$PROJECT_DIR$/pages/zxCompanyInfo" />
+      <recent name="$PROJECT_DIR$/pages/zxCompany/_id" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/index" />
+      <recent name="$PROJECT_DIR$/plugins" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/pages/user/index/yhq/_type" />
+      <recent name="$PROJECT_DIR$/pages/user/index" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9610e4fe-fc12-469a-a3fb-13e214eaa1c9" name="Default" comment="" />
+      <created>1510301591384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1510301591384</updated>
+      <workItem from="1510301593522" duration="4699000" />
+      <workItem from="1510318510104" duration="4016000" />
+      <workItem from="1510323519531" duration="48000" />
+      <workItem from="1510396241643" duration="3494000" />
+      <workItem from="1510400115068" duration="1378000" />
+      <workItem from="1510449985474" duration="7034000" />
+      <workItem from="1510534141319" duration="5564000" />
+      <workItem from="1510571187222" duration="1000" />
+      <workItem from="1510622490630" duration="19072000" />
+      <workItem from="1510710700604" duration="17111000" />
+      <workItem from="1510792670762" duration="6458000" />
+      <workItem from="1510879258046" duration="18821000" />
+      <workItem from="1511053584966" duration="1523000" />
+      <workItem from="1511138153488" duration="3960000" />
+      <workItem from="1511234425148" duration="1704000" />
+      <workItem from="1511257037725" duration="591000" />
+      <workItem from="1511314262901" duration="173000" />
+      <workItem from="1511314800729" duration="22000" />
+      <workItem from="1511318357332" duration="1411000" />
+      <workItem from="1511319881455" duration="8009000" />
+      <workItem from="1511397254173" duration="11276000" />
+      <workItem from="1511483664902" duration="19307000" />
+      <workItem from="1511742746436" duration="11035000" />
+      <workItem from="1511763411259" duration="50000" />
+      <workItem from="1511763464901" duration="1942000" />
+      <workItem from="1511770883903" duration="3360000" />
+    </task>
+    <task id="LOCAL-00001" summary="axtc3">
+      <created>1511257181568</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511257181568</updated>
+    </task>
+    <task id="LOCAL-00002" summary="axtc3">
+      <created>1511257275065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511257275065</updated>
+    </task>
+    <task id="LOCAL-00003" summary="axtc3">
+      <created>1511257313248</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511257313248</updated>
+    </task>
+    <task id="LOCAL-00004" summary="axtc3">
+      <created>1511318617600</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511318617600</updated>
+    </task>
+    <task id="LOCAL-00005" summary="axtc3">
+      <created>1511319286437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511319286437</updated>
+    </task>
+    <task id="LOCAL-00006" summary="axtc3">
+      <created>1511319470326</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511319470326</updated>
+    </task>
+    <task id="LOCAL-00007" summary="axtc3">
+      <created>1511319728498</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1511319728498</updated>
+    </task>
+    <task id="LOCAL-00008" summary="axtc3">
+      <created>1511320176743</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511320176743</updated>
+    </task>
+    <task id="LOCAL-00009" summary="axtc3">
+      <created>1511320328344</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511320328344</updated>
+    </task>
+    <task id="LOCAL-00010" summary="axtc3">
+      <created>1511320563234</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511320563234</updated>
+    </task>
+    <task id="LOCAL-00011" summary="axtc3">
+      <created>1511320864836</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1511320864836</updated>
+    </task>
+    <task id="LOCAL-00012" summary="axtc3">
+      <created>1511320958657</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1511320958657</updated>
+    </task>
+    <task id="LOCAL-00013" summary="axtc3">
+      <created>1511321183253</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1511321183253</updated>
+    </task>
+    <task id="LOCAL-00014" summary="axtc3">
+      <created>1511321282543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511321282543</updated>
+    </task>
+    <task id="LOCAL-00015" summary="axtc3">
+      <created>1511328865315</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511328865315</updated>
+    </task>
+    <task id="LOCAL-00016" summary="axtc3">
+      <created>1511329552396</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1511329552396</updated>
+    </task>
+    <task id="LOCAL-00017" summary="axtc3">
+      <created>1511330700960</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511330700960</updated>
+    </task>
+    <task id="LOCAL-00018" summary="axtc3">
+      <created>1511335124641</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1511335124641</updated>
+    </task>
+    <task id="LOCAL-00019" summary="axtc3">
+      <created>1511335448488</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511335448488</updated>
+    </task>
+    <task id="LOCAL-00020" summary="axtc3">
+      <created>1511335494524</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1511335494524</updated>
+    </task>
+    <task id="LOCAL-00021" summary="axtc3">
+      <created>1511335892356</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1511335892356</updated>
+    </task>
+    <task id="LOCAL-00022" summary="axtc3">
+      <created>1511338294760</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1511338294760</updated>
+    </task>
+    <task id="LOCAL-00023" summary="axtc3">
+      <created>1511338437172</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1511338437172</updated>
+    </task>
+    <task id="LOCAL-00024" summary="axtc3">
+      <created>1511343719007</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1511343719007</updated>
+    </task>
+    <task id="LOCAL-00025" summary="axtc3">
+      <created>1511343742377</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1511343742377</updated>
+    </task>
+    <task id="LOCAL-00026" summary="axtc3">
+      <created>1511344239438</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1511344239438</updated>
+    </task>
+    <task id="LOCAL-00027" summary="axtc3">
+      <created>1511344696332</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1511344696332</updated>
+    </task>
+    <task id="LOCAL-00028" summary="axtc3">
+      <created>1511345099082</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1511345099082</updated>
+    </task>
+    <task id="LOCAL-00029" summary="axtc3">
+      <created>1511345372535</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1511345372535</updated>
+    </task>
+    <task id="LOCAL-00030" summary="axtc3">
+      <created>1511419117485</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1511419117485</updated>
+    </task>
+    <task id="LOCAL-00031" summary="axtc3">
+      <created>1511493147197</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1511493147197</updated>
+    </task>
+    <task id="LOCAL-00032" summary="axtc3">
+      <created>1511493165069</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1511493165069</updated>
+    </task>
+    <task id="LOCAL-00033" summary="axtc3">
+      <created>1511504137974</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1511504137974</updated>
+    </task>
+    <task id="LOCAL-00034" summary="axtc3">
+      <created>1511505712387</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1511505712387</updated>
+    </task>
+    <task id="LOCAL-00035" summary="axtc3">
+      <created>1511506617835</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1511506617835</updated>
+    </task>
+    <task id="LOCAL-00036" summary="axtc3">
+      <created>1511508607628</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1511508607628</updated>
+    </task>
+    <task id="LOCAL-00037" summary="axtc3">
+      <created>1511742977237</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1511742977237</updated>
+    </task>
+    <task id="LOCAL-00038" summary="axtc3">
+      <created>1511742993834</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1511742993834</updated>
+    </task>
+    <task id="LOCAL-00039" summary="axtc3">
+      <created>1511747983016</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1511747983016</updated>
+    </task>
+    <task id="LOCAL-00040" summary="axtc3">
+      <created>1511752250242</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1511752250242</updated>
+    </task>
+    <task id="LOCAL-00041" summary="axtc3">
+      <created>1511752263154</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1511752263154</updated>
+    </task>
+    <task id="LOCAL-00042" summary="axtc3">
+      <created>1511752272891</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1511752272891</updated>
+    </task>
+    <task id="LOCAL-00043" summary="axtc3">
+      <created>1511752281802</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1511752281802</updated>
+    </task>
+    <task id="LOCAL-00044" summary="axtc3">
+      <created>1511773960934</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1511773960934</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="152059000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="401" y="23" width="1220" height="951" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21147542" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="axtc3" />
+    <option name="LAST_COMMIT_MESSAGE" value="axtc3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/components/popWin/login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/popWin/popWin.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhqzx/yhqzx.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhqzx/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhqzx/_type/yhqList.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhqzx/_type.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhq/_type/yhqList.vue" />
+    <entry file="file://$PROJECT_DIR$/components/popWin/changePWD.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/user/index/set.vue" />
+    <entry file="file://$PROJECT_DIR$/plugins/axios.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/header/header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1788">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/footer/footer.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/post.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/zxCompanyInfo/_id/member.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/zxxd/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/zxCompanyInfo/_id/comment.vue" />
+    <entry file="file://$PROJECT_DIR$/components/pagination/pagination.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/zxCompanyInfo/_id/introduction.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/zxCaseInfo/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/jcCompanyInfo/_id/project.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/jcCompanyInfo/_id/product.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/jcCompanyInfo/_id/comment.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/jcCompanyInfo/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/posts/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/posts/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/jcCompanyInfo/_id/introduction.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/zxCompanyInfo/_id/case.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhq/_type.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/yhq/_type/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/zxOrder.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/user/index/jcOrder.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/login/index.vue" />
+    <entry file="file://$PROJECT_DIR$/store/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/yyShop.js" />
+    <entry file="file://$PROJECT_DIR$/utils/event-bus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#37#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/zxCompanyInfo/_id.vue" />
+    <entry file="file://$PROJECT_DIR$/components/popWin/yuyue.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/zxCompany/index.vue" />
+    <entry file="file://$PROJECT_DIR$/pages/todos.vue" />
+    <entry file="file://$PROJECT_DIR$/plugins/vue-awesome-swiper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/_vue-waterfall@1.0.6@vue-waterfall/lib/waterfall.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/_vue-waterfall@1.0.6@vue-waterfall/lib/waterfall-slot.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/zxCase/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="52" lean-forward="false" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/vue-waterfall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8254">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/jcCompany/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="117" column="96" lean-forward="false" selection-start-line="117" selection-start-column="87" selection-end-line="117" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
