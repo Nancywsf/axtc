@@ -15,7 +15,8 @@
           <input type="text" placeholder="输入您的姓名" :value="userYYSJ.username" v-model.lazy="userYYSJ.username">
         </div>
         <div class="fill-box">
-          <input type="text" placeholder="输入您的电话" :value="userYYSJ.mobile" :class="'status-' + phoneIsOk" data-pattern="^1[34578]\d{9}$" data-error="您填写的手机号码不正确" v-model.lazy="userYYSJ.mobile" @blur="phoneIsOk=validator();">
+          <input type="text" placeholder="输入您的电话" :value="userYYSJ.mobile" :class="'status-' + phoneIsOk" data-pattern="^1[34578]\d{9}$" data-error="您填写的手机号码不正确" v-model.lazy="userYYSJ.mobile">
+          <!--@blur="phoneIsOk=validator()"-->
         </div>
       </div>
       <div class="foot-btn">
