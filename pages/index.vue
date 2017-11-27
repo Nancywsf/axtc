@@ -3,6 +3,7 @@
     <!--头部-->
     <v-header :meta="meta" :userInfo="userInfo"></v-header>
     <div class="main">
+
       <!--banner 开始-->
       <div class="home-banner banner">
         <div v-swiper:mySwiper="indexSwiperOption" id="indexSwiper">
