@@ -120,13 +120,8 @@
         return axios.get(context.store.state.HOST + '/zxpc/company/getHotKeyword?type=1')
       }
       function getCompanyList () {
-        //        let data = {
-        //          page: 0,
-        //          pagesize: 5,
-        //          keyword: '',
-        //          order: ''
-        //        }
-        return axios.get(context.store.state.HOST + '/zxpc/company/getZxCompanyList?page=0&pagesize=5')
+        let keyword = context.query.keyword === undefined ? '' : context.query.keyword
+        return axios.get(context.store.state.HOST + '/zxpc/company/getZxCompanyList?page=0&pagesize=5&keyword=' + keyword)
       }
       return axios.all([
         getHotWord(),
@@ -149,7 +144,7 @@
           pagesize: 5,
           pageNo: 1,
           order: '',
-          keyword: this.$route.query.keyword === undefined ? '' : this.$route.query.keyword
+          keyword: ''
         },
         userYYSJ: {
           username: '',
@@ -161,6 +156,7 @@
       }
     },
     created () {
+      this.pageData.keyword = this.$route.query.keyword === undefined ? '' : this.$route.query.keyword
     },
     methods: {
       // 获取公司列表

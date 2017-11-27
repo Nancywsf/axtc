@@ -369,6 +369,7 @@
   import vHeader from '~/components/header/header'
   import vFooter from '~/components/footer/footer'
   import yuYue from '~/components/popWin/yuyue'
+  import EventBus from '~/utils/event-bus'
   const ERR = 0
   let miniToastr
   if (process.browser) {
@@ -501,29 +502,38 @@
         //        $this.parents('.search-wrap').find('input').attr('placeholder', $this.data('placeholder'))
         //        $('#searchKey').data('type', $this.data('type'))
       },
-      searchKeyWord () {},
+      searchKeyWord () {
+        var type = document.querySelector('#searchKey').getAttribute('data-type')
+        if (type === '1') {
+          this.$router.push('/zxCompany?keyword=' + this.searchKey)
+        }
+        if (type === '2') {
+          this.$router.push('/jcCompany?keyword=' + this.searchKey)
+        }
+      },
       clickYY (item) {
         if (this.userInfo.isLogin === 'true') { // 已登录
-          let data = {
-            company_id: item.id,
-            cpmpanyName: item.title,
-            username: sessionStorage.getItem('nickname'),
-            mobile: sessionStorage.getItem('mobile'),
-            sid: sessionStorage.getItem('sid')
-          }
-          let res = this.$store.dispatch('yyShop', data)
-          if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
+          //          let data = {
+          //            company_id: item.id,
+          //            cpmpanyName: item.title,
+          //            username: sessionStorage.getItem('nickname'),
+          //            mobile: sessionStorage.getItem('mobile'),
+          //            sid: sessionStorage.getItem('sid')
+          //          }
+          // let res = this.$store.dispatch('yyShop', data)
+          // console.log(res)
+          // if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
           return false
         }
         // 未登录
-        // this.openDialog()
         this.userYYSJ.company_id = item.id
         this.userYYSJ.cpmpanyName = item.title
         document.querySelector('.main-yysj').style.display = 'block'
       },
       yuyueShopFun (data) {
-        let res = this.$store.dispatch('yyShop', data)
-        if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
+        // this.$store.dispatch('yyShop', data)
+        EventBus.yyShop(data)
+        // if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
       },
       buyYHQ (event) {
         var data = {}
@@ -581,7 +591,7 @@
     },
     mounted () {
       miniToastr.init()
-      this.userInfo.isLogin = sessionStorage.getItem('isLogin')
+      this.userInfo.isLogin = sessionStorage.getItem('isLogin') === null ? 'false' : 'true'
     },
     notifications: {
       showLoginError: {

@@ -103,6 +103,7 @@
   import axios from 'axios'
 
   const ERR = 0
+  // const HOST = ''
 
   export default {
     components: {
@@ -113,7 +114,8 @@
         return axios.get(context.store.state.HOST + '/zxpc/company/getHotKeyword?type=2')
       }
       function getComList () {
-        return axios.get(context.store.state.HOST + '/zxpc/company/getJcCompany?page=0&page_size=5')
+        let keyword = context.query.keyword === undefined ? '' : context.query.keyword
+        return axios.get(context.store.state.HOST + '/zxpc/company/getJcCompany?page=0&page_size=5&keyword=' + keyword)
       }
       return axios.all([
         getHotWord(),
@@ -123,7 +125,7 @@
           return {
             hotKey: res[0].data.data,
             zxCompanyList: res[1].data.data,
-            pageData: {page: 1, pagesize: 5, pageNo: res[1].data.pageCount}
+            pageData: {page: 1, pagesize: 5, pageNo: res[1].data.pageCount, keyword: '', order: ''}
           }
         })
     },
@@ -136,7 +138,7 @@
           pagesize: 5,
           pageNo: 2,
           order: '',
-          keyword: this.$route.query.keyword === undefined ? '' : this.$route.query.keyword
+          keyword: ''
         },
         userYYSJ: {
           username: '',
@@ -148,13 +150,13 @@
       }
     },
     created () {
+      this.pageData.keyword = this.$route.query.keyword === undefined ? '' : this.$route.query.keyword
     },
     methods: {
       // 获取公司列表
       getCompanyList: function (data) {
-        axios.post(
-          this.$store.state.HOST + '/zxpc/company/getZxCompanyList?page=' + (data.page - 1).toString() + '&page_size=' + data.pagesize.toString() + '&keyword=' + data.keyword + '&order=' + data.order,
-          // {page: data.page - 1, pagesize: data.pagesize, keyword: data.keyword, order: data.order},
+        axios.get(
+          this.$store.state.HOST + '/zxpc/company/getJcCompany?page=' + (data.page - 1).toString() + '&page_size=' + data.pagesize.toString() + '&keyword=' + data.keyword + '&order=' + data.order,
           {emulateJSON: true}
         ).then((response) => {
           response = response.data
@@ -168,7 +170,7 @@
         })
       },
       clickKeyWord: function (event) {
-        this.pageData.keyword = event.currentTarget
+        this.pageData.keyword = event.currentTarget.innerText
         this.getCompanyList(this.pageData)
       },
       searchListByKey: function () {
