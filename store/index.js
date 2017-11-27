@@ -49,7 +49,7 @@ export const actions = {
       })
   },
   getUserData ({ commit }, params) {
-    return axios.post(HOST + '/zxpc/my/info', params)
+    return axios.post('/zxpc/my/info', params)
       .then((res) => {
         const success = !!res.status && res.data && Object.is(res.data.code, 1)
         if (success) {
@@ -69,9 +69,8 @@ export const actions = {
       })
   },
   yyShop ({ commit }, params) {
-    return axios.post(HOST + '/zxpc/FreeDesign/index', params, {emulateJSON: true}).then((res) => {
-      const success = !!res.status && res.data && Object.is(res.data.code, 1)
-      return success
+    return axios.post('/zxpc/FreeDesign/index', params, {emulateJSON: true}).then((res) => {
+      commit('yyShop/getRes', res.data)
     })
   }
 }
