@@ -531,9 +531,7 @@
         document.querySelector('.main-yysj').style.display = 'block'
       },
       yuyueShopFun (data) {
-        // this.$store.dispatch('yyShop', data)
         EventBus.yyShop(data)
-        // if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
       },
       buyYHQ (event) {
         var data = {}

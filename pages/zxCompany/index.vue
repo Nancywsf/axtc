@@ -82,7 +82,7 @@
               </div>
               <div class="fill-box">
                 <i class="fa fa-phone"></i>
-                <input type="text" placeholder="电话号码" class="userPhone" v-model.lazy="userYYSJ.mobile" :class="'status-' + phoneIsOk" @blur="phoneIsOk=validator()" data-pattern="^1[34578]\d{9}$">
+                <input type="text" placeholder="电话号码" class="userPhone" v-model.lazy="userYYSJ.mobile" :class="'status-' + phoneIsOk" @blur="validator" data-pattern="^1[34578]\d{9}$">
               </div>
               <a href="" class="color-blue formore-yh">申请享受更多优惠</a>
               <button class="bg-red mfsj-submit" @click="yuyueShopFun(userYYSJ)">立即提交申请</button>
@@ -100,6 +100,8 @@
     </div>
 
     <v-footer :meta="meta"></v-footer>
+
+    <yu-yue :userYYSJ="userYYSJ" v-on:submit="yuyueShopFun"></yu-yue>
   </div>
 </template>
 
@@ -107,13 +109,15 @@
   import vHeader from '~/components/header/header'
   import vFooter from '~/components/footer/footer'
   import vPagination from '~/components/pagination/pagination'
+  import yuYue from '~/components/popWin/yuyue'
   import axios from 'axios'
+  import EventBus from '~/utils/event-bus'
 
   const ERR = 0
 
   export default {
     components: {
-      vHeader, vFooter, vPagination
+      vHeader, vFooter, vPagination, yuYue
     },
     asyncData (context) {
       function getHotWord () {
@@ -209,9 +213,33 @@
         o.className += ' on'
       },
       yuyueShopFun () {
-        let data = {}
-        let res = this.$store.dispatch('yyShop', data)
-        if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
+        let data = {
+          username: this.userYYSJ.username,
+          mobile: this.userYYSJ.mobile
+        }
+        EventBus.yyShop(data)
+      },
+      validator (event) {
+        this.phoneIsOk = EventBus.validator(event)
+      },
+      clickYY (item) {
+        if (this.userInfo.isLogin === 'true') { // 已登录
+          //          let data = {
+          //            company_id: item.id,
+          //            cpmpanyName: item.title,
+          //            username: sessionStorage.getItem('nickname'),
+          //            mobile: sessionStorage.getItem('mobile'),
+          //            sid: sessionStorage.getItem('sid')
+          //          }
+          // let res = this.$store.dispatch('yyShop', data)
+          // console.log(res)
+          // if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
+          return false
+        }
+        // 未登录
+        this.userYYSJ.company_id = item.id
+        this.userYYSJ.cpmpanyName = item.title
+        document.querySelector('.main-yysj').style.display = 'block'
       }
     }
   }

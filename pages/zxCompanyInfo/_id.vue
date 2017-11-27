@@ -78,6 +78,9 @@
         meta: { tabIndex: 1, hideHeader: true, hideFooter: true },
         userInfo: {isLogin: false}
       }
+    },
+    methods: {
+      clickYY () {}
     }
   }
 </script>
