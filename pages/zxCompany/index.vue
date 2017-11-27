@@ -166,7 +166,6 @@
       // 获取公司列表
       getCompanyList: function (data) {
         // this.getLoading()
-        console.log()
         axios.get(
           this.$store.state.HOST + '/zxpc/company/getZxCompanyList?page=' + (data.page - 1).toString() + '&pagesize=' + data.pagesize.toString() + '&keyword=' + data.keyword + '&order=' + data.order,
           {emulateJSON: true}
@@ -212,6 +211,11 @@
           sibings[i].setAttribute('data-type', 'desc')
         }
         o.className += ' on'
+      },
+      yuyueShopFun () {
+        let data = {}
+        let res = this.$store.dispatch('yyShop', data)
+        if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
       }
     }
   }

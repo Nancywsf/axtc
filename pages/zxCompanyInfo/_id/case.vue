@@ -31,13 +31,7 @@
       vPagination
     },
     asyncData (context) {
-      let data = {
-        id: context.route.params.id,
-        page: 0,
-        pagesize: 9,
-        pageNo: 1
-      }
-      return axios.post(context.store.state.HOST + '/zxpc/jdcase/getCaseByCompanyID', data).then((res) => {
+      return axios.get(context.store.state.HOST + '/zxpc/jdcase/getCaseByCompanyID?id=' + context.route.params.id + '&page=0&pagesize=9').then((res) => {
         return {
           caseList: res.data.data,
           casePagination: {page: 1, pagesize: 9, pageNo: res.data.pageCount}

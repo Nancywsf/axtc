@@ -69,7 +69,7 @@
         if (process.browser) {
           params.sid = sessionStorage.getItem('sid')
         }
-        axios.post(this.$store.state.HOST + '/zxpc/my/myorder', params, {emulateJSON: true}).then((response) => {
+        axios.post('/zxpc/my/myorder', params, {emulateJSON: true}).then((response) => {
           response = response.data
           if (response.code === ERR) {
             this.$layer.msg(response.msg)

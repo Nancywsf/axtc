@@ -179,11 +179,44 @@
         <p class="part-subtitle subtitle">经典案例，可供参考</p>
         <div class="part-content">
           <div class="left-swiper fl" id="zxalSwiper">
-            <div v-swiper:zxalSwiper="swiperOption[0]" v-for="(item, index) in jdal" :class="{on: index == 0}">
+            <div v-swiper:zxalSwiper_0="swiperOption[0]" class="on">
               <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(img, index) in item.img">
-                  <router-link :to="'/zxCaseInfo/' + item.id" target="_blank">
-                    <img :src="item.img[index]" :alt="item.title">
+                <div class="swiper-slide" v-for="(img, index) in jdal[0].img">
+                  <router-link :to="'/zxCaseInfo/' + jdal[0].id" target="_blank">
+                    <img :src="jdal[0].img[index]" :alt="jdal[0].title">
+                  </router-link>
+                </div>
+              </div>
+              <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+              <div class="swiper-button-next" slot="button-next">&gt;</div>
+            </div>
+            <div v-swiper:zxalSwiper_1="swiperOption[0]">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(img, index) in jdal[1].img">
+                  <router-link :to="'/zxCaseInfo/' + jdal[1].id" target="_blank">
+                    <img :src="jdal[1].img[index]" :alt="jdal[1].title">
+                  </router-link>
+                </div>
+              </div>
+              <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+              <div class="swiper-button-next" slot="button-next">&gt;</div>
+            </div>
+            <div v-swiper:zxalSwiper_2="swiperOption[0]">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(img, index) in jdal[2].img">
+                  <router-link :to="'/zxCaseInfo/' + jdal[2].id" target="_blank">
+                    <img :src="jdal[2].img[index]" :alt="jdal[2].title">
+                  </router-link>
+                </div>
+              </div>
+              <div class="swiper-button-prev" slot="button-prev">&lt;</div>
+              <div class="swiper-button-next" slot="button-next">&gt;</div>
+            </div>
+            <div v-swiper:zxalSwiper_3="swiperOption[0]">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(img, index) in jdal[3].img">
+                  <router-link :to="'/zxCaseInfo/' + jdal[3].id" target="_blank">
+                    <img :src="jdal[3].img[index]" :alt="jdal[3].title">
                   </router-link>
                 </div>
               </div>
@@ -326,6 +359,8 @@
     </div>
     <!--底部-->
     <v-footer :meta="meta"></v-footer>
+
+    <yu-yue :userYYSJ="userYYSJ" v-on:submit="yuyueShopFun"></yu-yue>
   </section>
 </template>
 
@@ -333,6 +368,7 @@
   import axios from 'axios'
   import vHeader from '~/components/header/header'
   import vFooter from '~/components/footer/footer'
+  import yuYue from '~/components/popWin/yuyue'
   const ERR = 0
   let miniToastr
   if (process.browser) {
@@ -340,7 +376,7 @@
   }
   export default {
     components: {
-      vHeader, vFooter
+      vHeader, vFooter, yuYue
     },
     asyncData (context) {
       function advlist () {
@@ -379,6 +415,13 @@
       return {
         meta: { tabIndex: 0, hideHeader: true, hideFooter: true },
         userInfo: {isLogin: ''},
+        userYYSJ: {
+          username: '',
+          mobile: '',
+          cpmpanyName: '',
+          company_id: '',
+          sid: ''
+        },
         sid: '',
         indexSwiperOption: {
           notNextTick: true,
@@ -474,6 +517,13 @@
         }
         // 未登录
         // this.openDialog()
+        this.userYYSJ.company_id = item.id
+        this.userYYSJ.cpmpanyName = item.title
+        document.querySelector('.main-yysj').style.display = 'block'
+      },
+      yuyueShopFun (data) {
+        let res = this.$store.dispatch('yyShop', data)
+        if (res) { this.showLoginError({message: '预约成功', type: 'info'}) }
       },
       buyYHQ (event) {
         var data = {}
@@ -486,7 +536,7 @@
         }
         var mobile = sessionStorage.getItem('mobile')
         axios.post(
-          this.$store.state.HOST + '/zxpc/my/duihuan',
+          '/zxpc/my/duihuan',
           {mobile: mobile, pay_points: data.pay_points, coupon_id: data.coupon_id, sid: sessionStorage.getItem('sid')},
           {emulateJSON: true}
         ).then((response) => {
@@ -523,6 +573,7 @@
             index = i
           } else {
             swiperSiblings[i].className = swiperSiblings[i].className.replace(' on', '')
+            swiperSiblings[i].className = swiperSiblings[i].className.replace('on ', '')
           }
         }
         if (swiper.getAttribute('data-init') === true) { return false }
@@ -772,9 +823,10 @@
   #zxalSwiper .swiper-button-prev{
     left:auto;
     right: 130px;
+    z-index: 2;
   }
   #zxalSwiper .swiper-button-next{
-    right: 50px;
+    right: 50px;z-index: 2;
   }
   .part-jdal .right-allist li{
     padding: 23px 25px;

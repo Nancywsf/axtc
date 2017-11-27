@@ -87,7 +87,7 @@
         if (process.browser) {
           params.sid = sessionStorage.getItem('sid')
         }
-        axios.post(this.$store.state.HOST + '/zxpc/my/getMyCoupon',
+        axios.post('/zxpc/my/getMyCoupon',
           params, {emulateJSON: true}
         ).then((response) => {
           response = response.data
@@ -111,7 +111,7 @@
         if (process.browser) {
           params.sid = sessionStorage.getItem('sid')
         }
-        axios.post(this.$store.state.HOST + '/zxpc/my/getMyCoupon',
+        axios.post('/zxpc/my/getMyCoupon',
           params, {emulateJSON: true}
         ).then((response) => {
           response = response.data

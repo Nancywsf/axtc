@@ -99,7 +99,7 @@
           mobile: '18761776812',
           password: '123456'
         }
-        axios.post(that.$store.state.HOST + '/zxpc/user/login', data).then((res) => {
+        axios.post('localhost:3000/zxpc/user/login', data, {emulateJSON: true}).then((res) => {
           sessionStorage.setItem('sid', res.data.data)
           // that.$store.commit('login/SET_USER', res.data)
           that.$router.push('/')
@@ -121,7 +121,7 @@
           mobile: that.loginData.userPhone,
           password: that.loginData.psw
         }
-        axios.post(that.$store.state.HOST + '/zxpc/user/login', data)
+        axios.post('/zxpc/user/login', data, {emulateJSON: true})
           .then((response) => {
             response = response.data
             if (response.code === ERR || response.code === 2) {
